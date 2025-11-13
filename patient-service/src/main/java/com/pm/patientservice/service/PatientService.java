@@ -25,4 +25,9 @@ public class PatientService {
 
         return patientResponseDTOs;
     }
+
+    public PatientResponseDTO createPatient(PatientResponseDTO patientResponseDTO) {
+        Patient patient = patientRepository.save()
+    }
+
 }
