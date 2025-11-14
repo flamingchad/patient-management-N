@@ -17,14 +17,14 @@ public class PatientMapper {
         return patientDTO;
     }
 
-    public static Patient toModel(PatientRequestDTO patientRequestDTO) {
-        Patient patient = new Patient();
-        patient.setName(patientRequestDTO.getName());
-        patient.setAddress(patientRequestDTO.getAddress());
-        patient.setEmail(patientRequestDTO.setEmail());
-        patient.setDateOfBirth(LocalDate.parse(patientRequestDTO.getDateOfBirth()));
-        patient.setRegisteredDate(LocalDate.parse(patientRequestDTO.getRegisteredDate()));
-
-        return patient;
-    }
+//    public static Patient toModel(PatientRequestDTO patientRequestDTO) {
+//        Patient patient = new Patient();
+//        patient.setName(patientRequestDTO.getName());
+//        patient.setAddress(patientRequestDTO.getAddress());
+//        patient.setEmail(patientRequestDTO.setEmail());
+//        patient.setDateOfBirth(LocalDate.parse(patientRequestDTO.getDateOfBirth()));
+//        patient.setRegisteredDate(LocalDate.parse(patientRequestDTO.getRegisteredDate()));
+//
+//        return patient;
+//    }
 }
