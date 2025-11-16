@@ -38,9 +38,11 @@ public class PatientController {
         return ResponseEntity.ok().body(patientResponseDTO);
     }
 
-    @PutMapping
-    public PatientResponseDTO updatePatient(UUID id, PatientRequestDTO patientRequestDTO) {
+    @PutMapping("/{id}")
+    public ResponseEntity<PatientResponseDTO> updatePatient(@PathVariable UUID id, @RequestBody PatientRequestDTO patientRequestDTO) {
+        PatientResponseDTO patientResponseDTO = patientService.updatePatient(id, patientRequestDTO);
 
-        Patient patient = patientRepository.findById(id).orElseThrow(() -> new PatientNotFoundException("Patient not found with Id: ", id));
+        return ResponseEntity.ok().body(patientResponseDTO);
     }
+
 }
